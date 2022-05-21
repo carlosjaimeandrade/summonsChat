@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Righteous';
+    src: url('../fonts/Righteous-Regular.ttf');
+}
+
+* {
+    font-family: "Righteous", Sans-serif;
+}
+
+body {
+    background-color: #F0F3F4;
+    margin: 0px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.app {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    height: 100vh;
+    grid-template-areas: "header header" "aside main" "footer footer";
+    transition: 2s;
+}
+
+.header {
+    grid-area: header;
+}
+
+.aside {
+    grid-area: aside;
+    overflow: hidden;
+    width: 200px;
+    z-index: 999;
+    transition: 1s;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.user-img-chat{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    background-color: #F0F3F4;
+    display: flex;
+    align-items: center;
+}
+
+.user-img-chat > span{
+    margin: 10px;
+}
+
+.user-img-chat img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chat-content{
+    width: 350px;
+    height: 350px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat{
+    height: 100%;
+    overflow: auto;
+}
