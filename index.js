@@ -42,10 +42,12 @@ app.use(flash());
 const UserRoutes = require('./routes/user')
 const HomeRoutes = require('./routes/home')
 const ChatRoutes = require('./routes/chat')
+const ApiRoutes = require('./routes/api')
 
 app.use("/", UserRoutes)
 app.use("/", HomeRoutes)
 app.use("/", ChatRoutes)
+app.use("/", ApiRoutes)
 
 //404
 app.get("*", (req, res) => {
