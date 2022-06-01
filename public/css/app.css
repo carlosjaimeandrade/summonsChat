@@ -27,7 +27,7 @@ a:hover {
     grid-template-columns: 200px 1fr;
     grid-template-rows: 50px 1fr 50px;
     height: 100vh;
-    grid-template-areas: "header header" "aside main" "footer footer";
+    grid-template-areas: "header header" "main main" "footer footer";
     transition: 2s;
 }
 
@@ -35,13 +35,7 @@ a:hover {
     grid-area: header;
 }
 
-.aside {
-    grid-area: aside;
-    overflow: hidden;
-    width: 200px;
-    z-index: 999;
-    transition: 1s;
-}
+
 
 .main {
     grid-area: main;

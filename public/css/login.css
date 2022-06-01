@@ -62,7 +62,7 @@
 
 .login-access button {
     width: 100%;
-    background-color: rgba(9, 72, 93, 1);
+    background-color: #32CCFE;
     border: none;
     color: #fff;
     padding: 1rem;
@@ -100,29 +100,11 @@ body {
     position: relative;
 }
 
-.login-banner h1 {
-    z-index: 2;
-    margin: 10px;
-}
 
-.login-banner img {
-    left: 0;
-    z-index: 1;
-    margin: 10px;
-    height: 300px;
-}
-
-.login-banner video {
-    position: absolute;
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
-    opacity: 0.6;
-}
 
 .login-entry {
     display: flex;
-    width: 90%;
+    width: 100%;
     justify-content: center;
 }
 
