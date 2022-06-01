@@ -1,18 +1,19 @@
-<div>
-    <ul>
-
-        <div infMenu class="title-aside infMenu">
-            <span>Usuários</span>
-        </div>
+<div class="chat-persona">
+    <div class="name-user">
+        <h5>Usuários</h5>
+    </div>
+    <ul class="user-on">
         <% users.forEach(user=>{%>
             <a href="/chat/<%= user.name %>">
-                <li>
-                    <div class="user-img-chat"> <img src="/img/user.png" alt=""> <span>
-                            <%= user.name %>
-                        </span></div>
+                <li data-<%= user.name %> >
+                    <div class="user-img-chat"> 
+                        <div>
+                            <img src="/img/user.png" alt="">
+                        </div>
+                        <span><%= user.name %></span>
+                    </div>
                 </li>
             </a>
-            <%}) %>
-
+        <%}) %>
     </ul>
 </div>

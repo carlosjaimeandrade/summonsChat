@@ -5,25 +5,7 @@
     
     <div class="container-summons">
         <div class="content-summons">
-            <div class="chat-persona">
-                <div class="name-user">
-                    <h5>Usuários</h5>
-                </div>
-                <ul class="user-on">
-                    <% users.forEach(user=>{%>
-                        <a href="/chat/<%= user.name %>">
-                            <li data-<%= user.name %> >
-                                <div class="user-img-chat"> 
-                                    <div>
-                                        <img src="/img/user.png" alt="">
-                                    </div>
-                                    <span><%= user.name %></span>
-                                </div>
-                            </li>
-                        </a>
-                    <%}) %>
-                </ul>
-            </div>
+            <%- include('../templates/user/aside.ejs') %>
             <div class="chat-container">
                 <div class="chat-content">
                     <div data-select="<%= name %>" class="name-user">
