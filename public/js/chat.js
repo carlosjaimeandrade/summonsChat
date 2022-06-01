@@ -29,12 +29,10 @@ async function updateChat(){
     chatMsgs = await msgs.json()
 
     chatMsgs.msgs.forEach(msg=>{
-        console.log(msg.msg)
         chat.insertAdjacentHTML('afterbegin', `<div ${msg.userId == chatMsgs.id ? "class=chat-right" : "class=chat-left"} ><span>${msg.msg}</span><div/>`)
     })
 }
 
 setInterval(()=>{
-    console.log('ola')
     updateChat()
 },1000)

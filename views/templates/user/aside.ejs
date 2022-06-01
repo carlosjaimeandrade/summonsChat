@@ -1,21 +1,18 @@
-<aside aside class="aside">
+<div>
+    <ul>
 
-    <div aside-option class="aside-option">
-
-        <div>
-            <ul>
-
-                <div infMenu class="title-aside infMenu">
-                    <span>Usuários</span>
-                </div>
-                <% users.forEach(user=>{%>
-                    <a href="/chat/<%= user.name %>">
-                        <li><div class="user-img-chat"> <img src="/img/user.png" alt=""> <span><%= user.name %></span></div></li>
-                    </a>
-                <%}) %>
-
-            </ul>
+        <div infMenu class="title-aside infMenu">
+            <span>Usuários</span>
         </div>
-    </div>
+        <% users.forEach(user=>{%>
+            <a href="/chat/<%= user.name %>">
+                <li>
+                    <div class="user-img-chat"> <img src="/img/user.png" alt=""> <span>
+                            <%= user.name %>
+                        </span></div>
+                </li>
+            </a>
+            <%}) %>
 
-</aside>
+    </ul>
+</div>

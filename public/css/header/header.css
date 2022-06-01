@@ -1,8 +1,8 @@
     .header {
         position: fixed;
         width: 100%;
-        background: linear-gradient(94deg, rgba(9,72,93,1) 0%, rgba(0,136,177,1) 100%);
-        box-shadow: 0px -6px 20px 1px rgba(0, 0, 0, 0.529);
+        background-color: #fff;
+        border-bottom: 1px solid rgba(187, 187, 187, 0.445);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -21,7 +21,7 @@
     }
     
     .logo {
-        height: 50px;
+        height: 60px;
         display: flex;
     }
     
@@ -38,18 +38,14 @@
         transition: 0.4s;
     }
     
-    .dropdown:hover {
-        background-color: #0088b1;
-        cursor: pointer;
-    }
-    
+
     .dropdown span {
         font-size: 12px;
-        color: #fff;
+        color: black;
     }
     
     .dropdown i {
-        color: #fff;
+        color: black;
     }
     
     .dropdown img {
