@@ -12,7 +12,7 @@ function news(){
     })
 }   
 
-news()
+  news()
 
 setInterval(()=>{
     news()

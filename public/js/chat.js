@@ -35,4 +35,4 @@ async function updateChat(){
 
 setInterval(()=>{
     updateChat()
-},1000)
+},500)
