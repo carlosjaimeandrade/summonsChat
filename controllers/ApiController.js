@@ -33,6 +33,8 @@ const msgs = async (req, res)=>{
 
     res.statusCode = 200;
     res.json({id: req.session.user_id, msgs})
+
+    await Msg.update({view: 1},{where: { chatid: from.id}})
 }
 
 const newMsg = async(req, res)=>{

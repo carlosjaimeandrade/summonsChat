@@ -28,6 +28,10 @@ const chat = async (req, res) => {
 
     const msgs = await Msg.findAll({order: [['id', 'DESC']], where: { chatid: from.id }})
 
+    await Msg.update({view: 1},{where: { chatid: from.id}})
+    await Msg.update({view: 1},{where: { chatid: to.id}})
+
+
     res.render('user/chat',{
         users: users,
         from: from,
