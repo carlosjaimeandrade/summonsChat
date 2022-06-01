@@ -6,7 +6,7 @@ const Chat = connection.define('chat', {
     codigo: {
         type: Sequelize.INTEGER,
         allowNull: false
-    },
+    }
 })
 
 Chat.belongsTo(User)

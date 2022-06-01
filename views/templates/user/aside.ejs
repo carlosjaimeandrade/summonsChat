@@ -5,15 +5,19 @@
     <ul class="user-on">
         <% users.forEach(user=>{%>
             <a href="/chat/<%= user.name %>">
-                <li data-<%= user.name %> >
+                <li  class="user-content" data-<%= user.name %> >
                     <div class="user-img-chat"> 
                         <div>
                             <img src="/img/user.png" alt="">
                         </div>
                         <span><%= user.name %></span>
                     </div>
+                    <div data-user="<%= user.name %>" class="news">
+                        <span></span>
+                    </div>
                 </li>
             </a>
         <%}) %>
     </ul>
 </div>
+

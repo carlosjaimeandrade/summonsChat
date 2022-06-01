@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const session = require('express-session');
 const MercadoPago = require('mercadopago');
 const flash = require('connect-flash');
+const cookieParser = require('cookie-parser');
 
 
 //configurando mercado pago
@@ -34,6 +35,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }))
+app.use(cookieParser());
 
 //configurando msg flash
 app.use(flash());

@@ -1,5 +1,6 @@
 const Msg = require('../models/Msg')
 const Chat = require('../models/Chat')
+const User = require('../models/User')
 
 const create = async (req,res)=>{
     const codigo = req.body.codigo
@@ -20,7 +21,6 @@ const create = async (req,res)=>{
         res.sendStatus(400)
     }
    
-
 }
 
 const msgs = async (req, res)=>{
@@ -35,8 +35,30 @@ const msgs = async (req, res)=>{
     res.json({id: req.session.user_id, msgs})
 }
 
+const newMsg = async(req, res)=>{
+    const name = req.params.user;
+        
+    const { id } = await User.findOne({ where: { name: name }})
+
+    const codigo = id > req.session.user_id ? `${id}${req.session.user_id}` : `${req.session.user_id}${id}`
+
+    const news = await Chat.findAll({
+        include: [ { model: Msg, where:{ userId: id, view: 0 } } ],
+        where: { codigo: codigo, userId: req.session.user_id}
+    })
+
+    if(news.length == 0){
+        res.json({total: 0})
+        return    
+    }
+
+    const total = news[0].msgs.length
+
+    res.json({total: total})    
+}
 
 module.exports = {
     create,
-    msgs
+    msgs,
+    newMsg
 }

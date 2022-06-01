@@ -28,6 +28,9 @@ const loginCheck = async(req, res) => {
             req.session.user_id = user_sucess.id
             req.session.remoteAddress = req.connection.remoteAddress
 
+            //apenas em desenvolvimento
+            res.cookie("user_id", user_sucess.id, { maxAge: 99960000 });
+
             res.redirect('user/assinatura')
         } else {
             req.flash('message', 'Erro de autenticação, verifique os dados e tente novamente');

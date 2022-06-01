@@ -8,6 +8,11 @@ const Msg = connection.define('msg', {
         type: Sequelize.TEXT,
         allowNull: false
     },
+    view:{
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        defaultValue: 0
+    }
 })
 
 Chat.hasMany(Msg)

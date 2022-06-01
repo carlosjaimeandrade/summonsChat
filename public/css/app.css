@@ -39,9 +39,20 @@ textarea:focus, input:focus, select:focus, button:focus {
 
 
 .user-img-chat{
-   
+ 
     display: flex;
     align-items: center;
+}
+.user-content{
+    position: relative;
+}
+.news{
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+.news i{
+    margin-right: 5px
 }
 
 .user-img-chat > span{

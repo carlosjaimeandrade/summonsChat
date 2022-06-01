@@ -2,6 +2,12 @@ const User = require('../models/User')
 
 function userAuth(req, res, next) {
 
+    if(req.cookies.user_id){
+        req.session.user_id = req.cookies.user_id
+        next()
+        return
+    }
+
     if (req.session.user_id) {
         User.findOne({
             where: {
